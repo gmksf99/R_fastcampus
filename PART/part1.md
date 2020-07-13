@@ -53,5 +53,3 @@
 	프로젝트를 만들었을때 활성화
 	각각의 프로젝트마다 설정을 다르게 할 수 있다.
 	한글이 깨지면 확인 : Code Editing -> Text encoding : UTF-8
-	
-# :fire:R Studio 익히기
