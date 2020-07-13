@@ -5,31 +5,31 @@
 # :grinning:R을 어디에 사용할까?
 * 탐색적 자료 분석(EDA)
 <h1 align="center">
-  <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/01.PNG"/></h1><br/>
+  <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/01.PNG" width = "400px"/></h1><br/>
 * 머신러닝
 <h1 align="center">
-  <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/02.PNG"/></h1><br/>
+  <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/02.PNG" width = "400px"/></h1><br/>
 * 주식
 * <h1 align="center">
-  <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/03.PNG"/></h1><br/>
+  <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/03.PNG" width = "400px"/></h1><br/>
 * 이미지 데이터 분석
 <h1 align="center">
-  <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/04.PNG"/></h1><br/>
+  <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/04.PNG" width = "400px"/></h1><br/>
 * 사운드 데이터 분석
 <h1 align="center">
-  <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/05.PNG"/></h1><br/>
+  <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/05.PNG" width = "400px"/></h1><br/>
 * 지도 시각화
 <h1 align="center">
-  <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/06.PNG"/></h1><br/>
+  <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/06.PNG" width = "400px"/></h1><br/>
 * 텍스트 마이닝
 <h1 align="center">
-  <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/07.PNG"/></h1><br/>
+  <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/07.PNG" width = "400px"/></h1><br/>
 * 소셜네트워크 분석
 <h1 align="center">
-  <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/08.PNG"/></h1><br/>
+  <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/08.PNG" width = "400px"/></h1><br/>
 * 웹 어플리케이션(대쉬보드) - shiny
 <h1 align="center">
-  <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/09.PNG"/></h1><br/>
+  <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/09.PNG" width = "400px"/></h1><br/>
 
 # :stuck_out_tongue_closed_eyes:R Studio 기본 설명
 * Source
