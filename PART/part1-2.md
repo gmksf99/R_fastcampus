@@ -31,7 +31,7 @@
   `summarise(mean.hwy=mean(hwy)) %>%  # hwy를 회사별로 평균을 구해 요약해라`
   `arrange(desc(mean.hwy)) # 내림차순으로 정렬해라`
 <h1 align="center">
-  <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/005.PNG" width = "500px"/></h1><br/>
+  <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/005.PNG" width = "400px"/></h1><br/>
   
 * Q2. 포드(ford) 연비 높은순 정렬
 `mpg %>%`
