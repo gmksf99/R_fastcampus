@@ -24,7 +24,7 @@
    <h1 align="center">
   <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/009.PNG" width = "500px"/></h1><br/>
 
-# mpg 데이터를 활용한 문제
+# :smile:mpg 데이터를 활용한 문제
 * Q1.회사별 평균 연비 높은순 정렬
  `mpg %>%`
   `group_by(manufacturer) %>%  # 제조사별로 데이터를 나누어라`
