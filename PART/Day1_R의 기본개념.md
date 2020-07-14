@@ -46,8 +46,8 @@
    분석 결과가 웹에서 어떻게 나타나는지 보여준다.
    
 * Tools -> Global Options
-	**V** Editing -> Soft-wrap R source files : 자동 줄 바꿈
-	**V** Display -> Highlight selected line : 선택한 줄 색 변화
+	* **V** Editing -> Soft-wrap R source files : 자동 줄 바꿈
+	* **V** Display -> Highlight selected line : 선택한 줄 색 변화
 	
 * Tools -> Project Options
 	프로젝트를 만들었을때 활성화
