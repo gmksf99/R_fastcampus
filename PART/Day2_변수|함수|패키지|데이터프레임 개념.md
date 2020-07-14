@@ -64,35 +64,35 @@
 `Row가 많은 것보다 Column이 많아지는거에 더 예민하게 된다.`
 
 # 1. :bouquet: 변수, 함수 사용해보기
-### **:bulb:변수**<br/>
-`a <- 1` : 변수 a에 1 저장<br/>
-`b <- 2` : 변수 b에 2 저장<br/>
-	* **연산**
-	   `a+b` : 결과 3<br/>
+### **:bulb:변수** <br/>
+`a <- 1` : 변수 a에 1 저장 <br/>
+`b <- 2` : 변수 b에 2 저장 <br/>
+	* **연산** <br/>
+	   `a+b` : 결과 3 <br/>
 	   `5*b` : 결과 10
 	   <br/>
 * **변수에 연속값 저장**<br/>
 `c <- c(1,2,3,4,5)` <br/>
-`d <- c(1:5)`<br/>
-`e <- seq(1,5)`<br/>
-모두 변수에 1, 2, 3, 4, 5가 저장된다.<br/>
-`f <- seq(1,10, by=2)` : 1~10까지 2씩 증가<br/>
-	* 연산
-	   `c+2` : 결과 3, 4, 5, 6, 7<br/>
+`d <- c(1:5)` <br/>
+`e <- seq(1,5)` <br/>
+모두 변수에 1, 2, 3, 4, 5가 저장된다. <br/>
+`f <- seq(1,10, by=2)` : 1~10까지 2씩 증가 <br/>
+	* 연산 <br/>
+	   `c+2` : 결과 3, 4, 5, 6, 7 <br/>
 	   `c+d` : 결과 2, 4, 6, 8, 10	
 	   <br/>
-* **변수에 문자 저장**
-`a2 <- "a"`  : 변수 a2에 "a"를 저장<br/>
-`b2 <- "Hello world!"`  # 문자 및 특수기호를 저장<br/>
-`c2 <- c("Hello!","world","is","good!")` # 연속된 문자를 저장<br/>
+* **변수에 문자 저장** <br/>
+`a2 <- "a"`  : 변수 a2에 "a"를 저장 <br/>
+`b2 <- "Hello world!"`  # 문자 및 특수기호를 저장 <br/>
+`c2 <- c("Hello!","world","is","good!")` # 연속된 문자를 저장 <br/>
  > **사칙연산은 숫자값에만 적용가능!!**  
-### **:bulb:함수**
+### **:bulb:함수** <br/>
 * `a <- c(1,2,3)`
-		`mean(a)` : 결과 2
-		`max(a)` : 결과 3  
-		`min(a)` : 결과 1
+		`mean(a)` : 결과 2 <br/>
+		`max(a)` : 결과 3  <br/>
+		`min(a)` : 결과 1 <br/>
 	* `b <- c("a", "a", "b", "c")`
-	   `qplot(b)` # 빈도그래프
+	   `qplot(b)` # 빈도그래프 
 	   <h1 align="center">
 	  <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/101.PNG" width = "500px"/></h1><br/>
 	*  collapse : 구분자로 구분하고 문자를 붙여준다.
@@ -124,17 +124,17 @@
  <h1 align="center">
 <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/106.PNG" width = "500px"/></h1><br/>
 
-`?qplot` : 함수 설명
->**+) 함수 설명 속에 있는 코드들** 
-> qplot(mpg, wt, data = mtcars)
-qplot(mpg, wt, data = mtcars, colour = cyl)
-qplot(mpg, wt, data = mtcars, size = cyl)
+`?qplot` : 함수 설명 <br/>
+>**+) 함수 설명 속에 있는 코드들**  <br/>
+> qplot(mpg, wt, data = mtcars) <br/>
+qplot(mpg, wt, data = mtcars, colour = cyl) <br/>
+qplot(mpg, wt, data = mtcars, size = cyl) <br/>
 qplot(mpg, wt, data = mtcars, facets = vs ~ am)
 
-### **:bulb:데이터 프레임**
-`history <- c(90, 80, 60, 70)` # 역사점수 생성
-`math <- c(50,60,100,20)` # 수학점수 생성
-`df_midterm <- data.frame(history,math)` # 데이터프레임 생성
+### **:bulb:데이터 프레임** <br/>
+`history <- c(90, 80, 60, 70)` # 역사점수 생성 <br/>
+`math <- c(50,60,100,20)` # 수학점수 생성 <br/>
+`df_midterm <- data.frame(history,math)` # 데이터프레임 생성 <br/>
 |  | history | math |
 |--|---------|------|
 | 1 | 90 | 50 |
@@ -142,9 +142,9 @@ qplot(mpg, wt, data = mtcars, facets = vs ~ am)
 | 3 | 60 | 100 |
 | 4 | 70 | 20 |
 
-**+ 학년까지 추가 된다면**
-`class <- c(1,1,2,2)`
-`df_midterm <- data.frame(history,math,class)`
+**+ 학년까지 추가 된다면** <br/>
+`class <- c(1,1,2,2)` <br/>
+`df_midterm <- data.frame(history,math,class)` <br/>
 |  | history | math | class |
 |--|---------|------|------|
 | 1 | 90 | 50 | 1 |
