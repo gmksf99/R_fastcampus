@@ -26,16 +26,16 @@
 * 패키지(packages) = 함수꾸러미
 * CRAN 등록 패키지 15,556개
 <br/>
-	* 함수를 쓰려면 반드시 필요!
-		* 패키지 설치 & 로드
-		* RStudio 실행할 때마다 패키지를 로드
+	* 함수를 쓰려면 반드시 필요! <br/>
+		* 패키지 설치 & 로드 <br/>
+		* RStudio 실행할 때마다 패키지를 로드 <br/>
 		* 내장 함수는 X
 		<br/>
-	* 필요에 따라 골라서 설치
-		* 필요한 기능에 따라
-		* 최신 분석 기법 수시로 업데이트
+	* 필요에 따라 골라서 설치 <br/>
+		* 필요한 기능에 따라 <br/>
+		* 최신 분석 기법 수시로 업데이트 <br/>
 		<br/>
-	* ex) ggplot2
+	* ex) ggplot2 <br/>
 		* 시각화 패키지
 			
 # :blossom: 데이터 프레임의 개념
@@ -67,7 +67,7 @@
 ### **:bulb:변수** <br/>
 `a <- 1` : 변수 a에 1 저장 <br/>
 `b <- 2` : 변수 b에 2 저장 <br/>
-	* **연산** <br/>
+* **연산** <br/>
 	   `a+b` : 결과 3 <br/>
 	   `5*b` : 결과 10
 	   <br/>
@@ -96,8 +96,8 @@
 	   <h1 align="center">
 	  <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/101.PNG" width = "500px"/></h1><br/>
 	*  collapse : 구분자로 구분하고 문자를 붙여준다.
-	* `c2 <- c("Hello!","world","is","good!")` : 
-	`paste(c2, collapse = " ")` :  "Hello! world is good!"
+	* `c2 <- c("Hello!","world","is","good!")` <br/> 
+	`paste(c2, collapse = " ")` :  "Hello! world is good!" <br/>
 	`c2_paste <- paste(e2, collapse = " ")` :  위 값을 변수 c2_paste에 저장
 
 # 2. :bouquet: 패키지, 데이터 프레임 사용해보기
