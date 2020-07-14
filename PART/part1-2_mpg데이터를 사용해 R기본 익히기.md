@@ -51,3 +51,15 @@
  `qplot(data=mpg, x=displ, y=hwy)`
  <h1 align="center">
   <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/008.PNG" width = "500px"/></h1><br/>
+
+### +추가) $ 는 "여러 변수중 어떤 것을 사용하겠다" 라는 의미이다.
+* mean(mpg$hwy)
+	* [1] 고속도로 연비 평균 : 23.44017
+* max(mpg$hwy)
+	* [1] 고속도로 연비 최대값 : 44
+* min(mpg$hwy)
+	* [1] 고속도로 연비 최소값 : 12
+* hist(mpg$hwy)
+	* 히스토그램_ [25~30]에 해당하는 자동차가 많다.
+	<h1 align="center">
+  <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/010.PNG"/></h1><br/>
