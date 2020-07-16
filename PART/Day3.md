@@ -12,8 +12,8 @@
 `read_excel("finalexam.xlsx", sheet = 1, col_names = T)` : 데이터 읽어오기<br/>
 sheet = 1 : 시트 1번을 / col_names = T : 칼럼  이름을 가져오겠다
 <h1 align="center">
-<img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/301.PNG" width = "500px"/>
-<img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/301-2.PNG" width = "500px"/>
+<img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/301.PNG" width = "300px"/>
+<img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/301-2.PNG" width = "300px"/>
 </h1><br/>
 
 * CSV 파일 불러오기
@@ -73,23 +73,23 @@ header = T : 액셀때와 마찬가지로 칼럼을 가져온다는 의미
 |  | 8 | 1 | 9 | 4.5 |
 
 # :100:파생변수를 이용해 mpg데이터 분석
-* 통합 연비 변수(total) 생성
+* 통합 연비 변수(total) 생성<br/>
 `mpg$total <- (mpg$cty + mpg$hwy)/2` 
-* 기준값 정하기
-`summary(mpg$total)` 
+* 기준값 정하기<br/>
+`summary(mpg$total)` <br/>
 `hist(mpg$total)`
 <h1 align="center">
 <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/304.PNG" width = "500px"/></h1><br/>
 
-* 조건물으로 합격 판정 변수(test) 생성
+* 조건물으로 합격 판정 변수(test) 생성 <br/>
 `mpg$test <- ifelse(mpg$total >= 20, "pass", "fail")` : 20보다 크거나 같으면 pass 아니면 fail
-* 빈도표로 합격 판정 자동차 수 보기
-`table(mpg$test)` : pass, fail 숫자만 출력
+* 빈도표로 합격 판정 자동차 수 보기 <br/>
+`table(mpg$test)` : pass, fail 숫자만 출력 <br/>
 `qplot(mpg$test)` : 막대 그래프 생성
 <h1 align="center">
 <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/305.PNG" width = "500px"/></h1><br/>
 
-* 중첩 조건문 활용 ex. 연비 등급 변수 생성
+* 중첩 조건문 활용 ex. 연비 등급 변수 생성 <br/>
 `mpg$grade <- ifelse(mpg$total >= 30, "A", ifelse(mpg$total >= 20, "B", "C"))` : A, B둘다 해당되지 않으면 C
 
 # :fire:지금까지 배운 내용으로 복습!!
@@ -97,29 +97,29 @@ header = T : 액셀때와 마찬가지로 칼럼을 가져온다는 의미
 <h1 align="center">
 <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/302.PNG" width = "500px"/></h1><br/>
 
-* A1 
-`mpg <- as.data.frame(ggplot2::mpg)` 
+* A1 <br/>
+`mpg <- as.data.frame(ggplot2::mpg)`  <br/>
 `mpg_new <- mpg # 복사본 생성`
-* A2
-`library(dplyr) #이 패키지가 있어야 가능`
+* A2 <br/>
+`library(dplyr) #이 패키지가 있어야 가능` <br/>
 `mpg_new <- rename(mpg_new, city = cty, highway = hwy)`
-* A3
+* A3 <br/>
 `head(mpg_new)`
 
 ### 2
 <h1 align="center">
 <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/307.PNG" width = "500px"/></h1><br/>
 
-* A1
+* A1 <br/>
 `midwest <- as.data.frame(ggplot2::midwest)`
-* A2
+* A2 <br/>
 `midwest <- rename(midwest, total = poptotal, asian = popasian)`
-* A3
-`midwest$per_asian <- (midwest$asian/midwest$total)*100`
+* A3 <br/>
+`midwest$per_asian <- (midwest$asian/midwest$total)*100` <br/>
 `hist(midwest$per_asian)`
-* A4
-`mean(midwest$per_asian)`
+* A4 <br/>
+`mean(midwest$per_asian)` <br/>
 `midwest$percent_test <- ifelse(midwest$per_asian >= 0.4872462, "large", "small")`
-* A5
-`table(midwest$percent_test)`
+* A5 <br/>
+`table(midwest$percent_test)` <br/>
 `qplot(midwest$percent_test)`
