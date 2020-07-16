@@ -118,4 +118,4 @@
 * hist(mpg$hwy)
 	* 히스토그램_ [25~30]에 해당하는 자동차가 많다.
 	<h1 align="center">
-  <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/100.PNG" width = "500px"/></h1><br/> 
+  <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/100.PNG" width = "500px"/></h1><br/>
