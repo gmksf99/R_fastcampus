@@ -207,22 +207,27 @@
 * 정상범위 기준을 정해서 벗어나면 결측 처리한다.
 * 기준 정할 때 제일 많이 사용하는 방법 : 표준편차, 상자그림(boxplot)
 <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/518.PNG" width = "500px"/> 
+
 * 예시) 상자 그림으로 극단치 기준 정하기
 	* `boxplot(mpg$hwy)`
-	<img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/521.PNG" width = "700px"/>
-	* `boxplot(mpg$hwy)$stats` : 통계치 출력
-	<img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/522.PNG" width = "700px"/>
-		* 해석>
-			* 밑의 경계 : 12
-			* 상자 밑면(1분위 수) : 18
-			* 중앙값 : 24
-			* 상자 윗면(3분위 수) : 27
-			* 윗쪽 경계 : 37
-	* 결측치 처리
-		* `mpg$hwy <- ifelse(mpg$hwy < 12 | mpg$hwy > 37, NA, mpg$hwy)` : 12미만 37초과면 NA 할당, 그외는 원래값 할당
-		* `table(is.na(mpg$hwy))` : NA 개수 확인
-	* 결측치 제외 후 분석
-		* `mpg %>% group_by(drv) %>% summarise(mean_hwy =mean(hwy, na.rm = T))`
+	
+<img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/521.PNG" width = "500px"/><br/>
+
+* `boxplot(mpg$hwy)$stats` : 통계치 출력
+
+<img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/522.PNG" width = "200px"/><br/>
+
+* 해석>
+	* 밑의 경계 : 12
+	* 상자 밑면(1분위 수) : 18
+	* 중앙값 : 24
+	* 상자 윗면(3분위 수) : 27
+	* 윗쪽 경계 : 37
+* 결측치 처리
+	* `mpg$hwy <- ifelse(mpg$hwy < 12 | mpg$hwy > 37, NA, mpg$hwy)` : 12미만 37초과면 NA 할당, 그외는 원래값 할당
+	* `table(is.na(mpg$hwy))` : NA 개수 확인
+* 결측치 제외 후 분석
+	* `mpg %>% group_by(drv) %>% summarise(mean_hwy =mean(hwy, na.rm = T))`
 
 # :fire:연습문제 2
 ### 결측치
