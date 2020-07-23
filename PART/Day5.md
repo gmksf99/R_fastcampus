@@ -133,7 +133,7 @@
 * 1.5 IQR: 사분위 범위(Q1~Q3간 거리)의 1.5배
 
 # :sparkler: 그래프 정제
-### 1. 결측치 정제
+## 1. 결측치 정제
 
 
 *  결측치(Missing Value) 
@@ -177,15 +177,55 @@
 * 결측치 제외하고 평균 구하기
 	*  `exam %>% summarise(mean_math  = mean(math, na.rm = T))`
 
-### 2. 결측치 대체
+### 1-2. 결측치 대체
 * 결측치 많을 경우 모두 제외하면 데이터 손실이 크다
 * 대안 : 다른 값 채워넣기
-#### 결측치 대체법(imputation)
+##### 결측치 대체법(imputation)
 * 대표값(평균, 최빈값, 등)으로 일괄 대체
 * 통계분석 기법 적용, 예측값 추정해서 대체
 * `exam$math <- ifelse(is.na(exam$math),55, exam$math)` : math가 NA면 55로 대체
 
+## 2. 이상치 정제
+* 이상치(Outlier) : 정상범주에서 크게 벗어난 값 
+	* 이상치 포함시 분석 결과 왜곡 
+	* 결측 처리 후 제외하고 분석
+	<img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/517.PNG" width = "500px"/>
+
+### 존재할 수 없는 값 제거
+* 예시) 성별은 1, 2로 점수는 5점 만점
+	* `outlier <- data.frame(sex = c(1,2,1,3,2,1), score = c(5,4,3,4,2,6))` : sex 3,score 6 이상치
+* 빈도로 이상치를 찾음
+	* `table(outlier$sex)`
+	* `table(outlier$score)`
+* 이상치를 NA로 변환
+	* `outlier$sex <- ifelse(outlier$sex == 3, NA, outlier$sex)`
+	* `outlier$score <- ifelse(outlier$score == 6, NA, outlier$score)`
+* 결측치 제외 후 분석
+	* `outlier %>% filter(!is.na(sex) & !is.na(score)) %>% group_by(sex) %>% summarise(mean_score = mean(score))` : NA값을 제외하고 성별로 평균 점수를 구해라
+
+### 극단적인 값
+* 정상범위 기준을 정해서 벗어나면 결측 처리한다.
+* 기준 정할 때 제일 많이 사용하는 방법 : 표준편차, 상자그림(boxplot)
+<img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/518.PNG" width = "500px"/> 
+* 예시) 상자 그림으로 극단치 기준 정하기
+	* `boxplot(mpg$hwy)`
+	<img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/521.PNG" width = "700px"/>
+	* `boxplot(mpg$hwy)$stats` : 통계치 출력
+	<img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/522.PNG" width = "700px"/>
+		* 해석>
+			* 밑의 경계 : 12
+			* 상자 밑면(1분위 수) : 18
+			* 중앙값 : 24
+			* 상자 윗면(3분위 수) : 27
+			* 윗쪽 경계 : 37
+	* 결측치 처리
+		* `mpg$hwy <- ifelse(mpg$hwy < 12 | mpg$hwy > 37, NA, mpg$hwy)` : 12미만 37초과면 NA 할당, 그외는 원래값 할당
+		* `table(is.na(mpg$hwy))` : NA 개수 확인
+	* 결측치 제외 후 분석
+		* `mpg %>% group_by(drv) %>% summarise(mean_hwy =mean(hwy, na.rm = T))`
+
 # :fire:연습문제 2
+### 결측치
 <h1 align="center">
 <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/514.PNG" width = "700px"/></h1><br/>
 <h1 align="center">
@@ -196,3 +236,21 @@
 	* `table(is.na(mpg$hwy))` : 5개
 * A2
 	* `mpg %>% filter(!is.na(hwy)) %>% group_by(drv) %>% summarise(mean_hwy = mean(hwy)) %>% arrange(desc(mean_hwy))` : 결측치를 제외하고 drv별로 분리해서 hwy 평균을 구하고 내림차순으로 정렬
+	
+### 이상치
+<h1 align="center">
+<img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/523.PNG" width = "700px"/></h1><br/>
+<h1 align="center">
+<img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/524.PNG" width = "700px"/></h1><br/>
+
+* A1
+	* `table(mpg$drv)` : 이상치 "k" 확인
+	* `mpg$drv <- ifelse(mpg$drv %in% c("4","f","r"), mpg$drv, NA)` : "4", "f", "r" 외에 값에 NA를 할당
+	* `table(mpg$drv)` : 이상치가 사라짐
+* A2
+	* `boxplot(mpg$cty)$stats` : 상자 그림 생성 및 통계치 출력
+	* `mpg$cty <- ifelse(mpg$cty < 9 | mpg$cty > 26, NA,mpg$cty)` : 9~26 벗어나면 NA할당
+	* `boxplot(mpg$cty)` : 이상치가 사라진 상자 그림
+* A3
+	* `mpg %>% filter(!is.na(drv) & !is.na(cty)) %>% group_by(drv) %>% summarise(mean_cty =mean(cty))` : drv, cty에사 NA값을 제외하고 drv별로 cty평균 구하기
+
