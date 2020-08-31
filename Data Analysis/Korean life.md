@@ -114,7 +114,7 @@
 ### 절차
 1. 변수 검토 및 정제 - 연령대 
 <h1 align="center">
-<img src = "https://github.com/gmksf99/R_fastcampus/blob/master/img2/8.PNG" width = "500px"/></h1>
+<img src = "https://github.com/gmksf99/R_fastcampus/blob/master/img2/8.PNG" width = "200px"/></h1>
 
 * 1-1.연령대 변수 생성 
 	* `welfare <- welfare %>% mutate(ageg = ifelse(age < 30, "young", ifelse(age <= 59, "middle","old")))`
