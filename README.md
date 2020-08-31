@@ -1,5 +1,5 @@
 # :exclamation:R_fastcampus
-* 프로젝트와 함께 배우는 R 데이터 분석 올인원 패키지 Online
+* R 데이터 분석 공부
 ### STEP
 <h1 align="center">
   <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/.img/1.PNG" width = "300px"/><br/></h1>
