@@ -44,12 +44,12 @@
 **분산이 같을 경우**
 
  <h1 align="center">
-<img src = "https://github.com/gmksf99/R_fastcampus/blob/master/img4/004.PNG" width = "500px"/></h1>
+<img src = "https://github.com/gmksf99/R_fastcampus/blob/master/img3/004.PNG" width = "500px"/></h1>
 
 <h1 align="center">
 <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/img3/005.PNG" width = "500px"/></h1>
 
-**분산이 같을 경우**
+**분산이 다를 경우**
 <h1 align="center">
 <img src = "https://github.com/gmksf99/R_fastcampus/blob/master/img3/007.PNG" width = "500px"/></h1>
 
